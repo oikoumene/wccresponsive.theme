@@ -1,0 +1,2 @@
+wccresponsive.theme
+===================
