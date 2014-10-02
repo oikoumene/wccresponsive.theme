@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    >
+
+    <xsl:if 
+        test="dl[contains(@class,'portlet')] and 
+              not(dl[contains(@class,'portletSearch')]) and 
+              not(dl[contains(@class,'portletWCCSocialConnectPortlet')]) and 
+              not(dl[contains(@class,'portletWCCDonationLinkPortlet')])">
+        <div class="portlet-wrapper">
+            <h2 class="portlet-header">
+                <xsl:copy-of select="dl/dt[@class='portletHeader']/node()"/>
+            </h2>
+            <div class="portlet-content">
+                <xsl:for-each select="dl/dd">
+                    <div>
+                        <xsl:copy-of select="*"/>
+                    </div>
+                </xsl:for-each>
+            </div>
+        </div>
+    </xsl:if>
+    <xsl:if test="dl[contains(@class,'portletSearch')]">
+        <div class="portlet-wrapper">
+            <div class="search-portlet">
+                <xsl:copy-of select="dl/dd/form"/>
+            </div>
+        </div>
+    </xsl:if>
+
+    <xsl:if test="dl[contains(@class,'portletWCCSocialConnectPortlet')]">
+        <div class="portlet-wrapper">
+            <div class="social-portlet">
+                <div class="social-label">Connect</div> 
+                <div class="social-icon">
+                <a class="g-plus"><xsl:attribute name="href"><xsl:value-of select="dl/dd/a[contains(@class,'social-gplus')]/@href"/></xsl:attribute></a>
+                <a class="facebook"><xsl:attribute name="href"><xsl:value-of select="dl/dd/a[contains(@class,'social-facebook')]/@href"/></xsl:attribute></a>
+                <a class="twitter"><xsl:attribute name="href"><xsl:value-of select="dl/dd/a[contains(@class,'social-twitter')]/@href"/></xsl:attribute></a>
+                <a class="rss"><xsl:attribute name="href"><xsl:value-of select="dl/dd/a[contains(@class,'social-rss')]/@href"/></xsl:attribute></a>
+            </div>
+            </div>
+        </div>
+    </xsl:if>
+    <xsl:if test="dl[contains(@class,'portletWCCDonationLinkPortlet')]">
+        <div class="donation-portlet">
+            <xsl:copy-of select="dl/dd/*"/>
+        </div>
+    </xsl:if>
+    <xsl:if test="not(dl[contains(@class,'portlet')])">
+        <div class="portlet-wrapper">
+            <xsl:copy-of select="node()"/>
+        </div>
+    </xsl:if>
+
+</section>
