@@ -6,37 +6,164 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     css:if-content="#visual-portal-wrapper">
+    
+    <!--HEAD SECTION-->
+    <!-- Drop styles in the head - these are added back by including them from Plone -->
+    <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />
+    <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
+    <prepend css:theme=".main-wrapper" css:content="#portal-personaltools"/>
 
-    <rules css:if-content="#visual-portal-wrapper">
-        <theme href="index.html"/>
-        <!--HEAD SECTION-->
-        <!-- Drop styles in the head - these are added back by including them from Plone -->
-        <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />
-        <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
-        <replace theme="/html" content="/html" attributes="lang"/>
-        <merge theme="/html/body" content="/html/body" attributes="class"/>
-        <merge theme="/html/body" content="/html/body" attributes="dir"/>
-        <append css:theme="body" css:content="#plone-analytics"/>
+    <!--logo-->
+    <replace css:theme="#logo" css:content="#portal-logo > a"/>
+    <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
+    <drop css:theme=".logo-container h1.title" attributes="class"/>
 
-        <replace css:theme-children="#portal-personaltools-wrapper"
-            css:content-children="#portal-personaltools-wrapper"/>
-        <replace css:theme-children="#portal-searchbox"
-            css:content-children="#portal-searchbox"/>
+    <!-- search -->
+    <replace css:theme-children=".top-right-container .search-container">
+        <form class="search-portlet"><xsl:attribute name="action">
+            <xsl:value-of select="//*[@id='portal-searchbox']/form/@action"/></xsl:attribute>
+            <xsl:copy-of css:select="#portal-searchbox input[name='SearchableText']"/>
+            <xsl:copy-of css:select="#portal-searchbox input.searchButton"/>
+        </form>
+    </replace>
+    <!--BODY-->
+    <merge theme="/html/body" content="/html/body" attributes="class"/>
+    <merge theme="/html/body" content="/html/body" attributes="dir"/>
+    <merge theme="/html/body" css:content="meta[name='wcc.subsite']" attributes="class"/>
+    
+    <!--navigation-->
+    <replace css:theme-children='#portal-globalnav' 
+              css:content-children='#portal-globalnav' />
+    <replace 
+        css:theme-children='#portal-languageselector' 
+        css:content-children='#portal-languageselector'/>
+    <replace
+        css:theme-children=".footer-link"
+        css:content-children="#portal-siteactions"/>
 
-        <replace css:theme="#portal-logo"
-            css:content="#portal-logo"/>
+    <!--homepage-->
 
-        <replace css:theme-children="#portal-globalnav"
-            css:content-children="#portal-globalnav"/>
+    <rules css:if-content="#homepage-view.homepage-full-width">
+        <theme href="index-subsite.html"/>
+        <after css:theme=".focus-container">
+            <div style="margin-top:20px">
+                <xsl:copy-of css:select="#edit-bar"/>
+            </div>
+        </after>
+        <drop css:theme="article.main-page" 
+            css:if-not-content=".homepage-newsitem"/>
+        <replace css:theme-children=".three-col-items">
+            <xsl:for-each css:select="#homepage-news .homepage-newsitem">
+                <div>
+                    <xsl:if test="div/div/img">
+                        <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                        <xsl:copy-of select="div/div/img"/>
+                        <p><xsl:value-of select="div/div/p/text()"/></p>
+                    </xsl:if>
+                    <xsl:if test="not(div/div/img)">
+                        <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                        <p><xsl:value-of select="div/div/p/text()"/></p>
+                    </xsl:if>
+                </div>
+            </xsl:for-each>
+        </replace>
+        <after css:theme=".three-col-items">
+            <div class="clearfix news-list-morelink">
+                <xsl:copy-of css:select=".homepage-morenews > a"/>
+            </div>
+        </after>
+        <replace css:theme=".focus-container" css:content="#homepage-slider"/>
+    </rules>
 
-        <replace css:theme-children="#portal-columns"
-            css:content-children="#portal-columns"/>
+    <rules css:if-content="#homepage-view.homepage-normal-width">
+        <theme href="index.html" />
+        <after css:theme=".focus-container">
+            <div style="margin-top:20px">
+                <xsl:copy-of css:select="#edit-bar"/>
+            </div>
+        </after>
+        <replace css:theme=".focus-container" css:content="#homepage-slider"/>
+        <drop css:theme=".main-page.right-content" css:if-not-content="#homepage-news-events-listing"/>
+        <replace css:theme-children=".news-list-container">
+            <xsl:for-each css:select="#homepage-news .homepage-newsitem">
+                <div class="clearfix news-list-item">
+                    <xsl:if test="div/div/img">
+                        <div class="news-img"><xsl:copy-of select="div/div/img"/></div>
+                        <div class="news-content">
+                            <h3><xsl:copy-of select="div/div/h3/a"/></h3>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </div>
+                    </xsl:if>
+                    <xsl:if test="not(div/div/img)">
+                        <h3><xsl:copy-of select="div/div/h3/a"/></h3>
+                        <p><xsl:value-of select="div/div/p/text()"/></p>
+                    </xsl:if>
+                </div>
 
-        <replace css:theme-children="#portal-colophon"
-            css:content-children="#portal-colophon"/>
+            </xsl:for-each>
+            <div class="clearfix news-list-morelink">
+                <xsl:copy-of css:select=".homepage-morenews > a"/>
+            </div>
+        </replace>
 
-        <replace css:theme-children="#portal-siteactions"
-            css:content-children="#portal-siteactionst"/>
+        <replace css:theme-children=".events-list-container">
+            <xsl:if test="//h2[@id='homepage-events-title']/text()">
+                <h2 class="portlet-header"><xsl:value-of select="//h2[@id='homepage-events-title']/text()"/></h2>
+            </xsl:if>
+            <xsl:for-each css:select=".homepage-event">
+                <div class="clearfix events-list-item">
+                    <xsl:copy-of select="p"/>
+                </div>
+            </xsl:for-each>
+        </replace>
 
     </rules>
-</rules>
+
+    <rules if-content="//body[contains(@class,'template-edit')] or //body[contains(@class,'template-atct_edit')]">
+        <theme href="content.html" />
+    </rules>
+    <!--content left-->
+    <rules if-content="//div[@id='portal-column-one'] and //div[@id='portal-column-two']">
+        <theme href="content-center.html" />
+    </rules>
+    <rules if-content="//div[@id='portal-column-one']">
+        <theme href="content-right.html" />
+    </rules>
+    <!--content right-->
+    <rules if-content="//div[@id='portal-column-two']">
+        <theme href="content-left.html" />
+    </rules>
+    <!--content/nocolumn-->
+    <rules if-not-content="//div[@id='portal-column-one'] and //div[@id='portal-column-two']">
+        <theme href="content.html" />
+    </rules>
+
+    <rules css:if-content="#homepage2-view">
+        <before css:theme="#main" css:content="#wcc-homepage-homepage2slider"/>
+    </rules>
+    
+    <replace theme-children="//article[contains(@class, 'main-page')]" content-children="//div[@id='portal-column-content']"
+        css:if-not-content="#homepage-view"/>
+
+    <before css:theme="#main" css:content="#portlets-in-header"/>
+    <replace css:theme-children="aside.left" css:if-content="#portal-column-one">
+        <xsl:for-each css:select="#portal-column-one .portletWrapper">
+            <xi:include href="portlet-rules.xml"/>
+        </xsl:for-each>
+        <xsl:copy-of css:select="#portletmanager-plone-leftcolumn"/>
+        <xsl:copy-of css:select="#portal-column-one .managePortletsLink"/>
+    </replace>
+    <drop css:theme-children="aside.left" css:if-not-content="#portal-column-one"/> 
+    <replace css:theme-children="aside.right" css:if-content="#portal-column-two">
+        <xsl:for-each css:select="#portal-column-two .portletWrapper">
+            <xi:include href="portlet-rules.xml"/>
+        </xsl:for-each>
+        <xsl:copy-of css:select="#portletmanager-plone-rightcolumn"/>
+        <xsl:copy-of css:select="#portal-column-two .managePortletsLink"/>
+    </replace>
+    <drop css:theme-children="aside.right" css:if-not-content="#portal-column-two"/> 
+
+    <after css:theme="#main" css:content="#plone-analytics"/>
+    <replace css:theme-children="#wcc-copyright" css:content-children="#wcc-copyright"/>
+    
+</rules><!--end main rule-->
