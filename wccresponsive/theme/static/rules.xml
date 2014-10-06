@@ -142,7 +142,7 @@
         <before css:theme="#main" css:content="#wcc-homepage-homepage2slider"/>
     </rules>
     
-    <replace theme-children="//article[contains(@class, 'main-page')]" content-children="//div[@id='portal-column-content']"
+    <replace theme-children="//div[contains(@class, 'main-page')]" content-children="//div[@id='portal-column-content']"
         css:if-not-content="#homepage-view"/>
 
     <before css:theme="#main" css:content="#portlets-in-header"/>
