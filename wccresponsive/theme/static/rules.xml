@@ -11,6 +11,11 @@
     <!-- Drop styles in the head - these are added back by including them from Plone -->
     <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />
     <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
+    <replace theme="/html" content="/html" attributes="lang"/>
+    <merge theme="/html/body" content="/html/body" attributes="class"/>
+    <merge theme="/html/body" content="/html/body" attributes="dir"/>
+    <merge theme="/html/body" css:content="meta[name='wcc.subsite']" attributes="class"/>
+    <append css:theme="body" css:content="#plone-analytics"/>
     <prepend css:theme=".main-wrapper" css:content="#portal-personaltools"/>
 
     <!--logo-->
@@ -26,10 +31,6 @@
             <xsl:copy-of css:select="#portal-searchbox input.searchButton"/>
         </form>
     </replace>
-    <!--BODY-->
-    <merge theme="/html/body" content="/html/body" attributes="class"/>
-    <merge theme="/html/body" content="/html/body" attributes="dir"/>
-    <merge theme="/html/body" css:content="meta[name='wcc.subsite']" attributes="class"/>
     
     <!--navigation-->
     <replace css:theme-children='#portal-globalnav' 
@@ -40,9 +41,13 @@
     <replace
         css:theme-children=".footer-link"
         css:content-children="#portal-siteactions"/>
+    
+    <!--content-->
+    <replace css:theme-children=".main-page" css:content-children="#portal-column-content" />
+    <replace css:theme-children=".sidebar-left" css:content-children="#portal-column-one"/>
+    <replace css:theme-children=".sidebar-right" css:content-children="#portal-column-two"/>
 
     <!--homepage-->
-
     <rules css:if-content="#homepage-view.homepage-full-width">
         <theme href="index-subsite.html"/>
         <after css:theme=".focus-container">
@@ -122,46 +127,16 @@
     <rules if-content="//body[contains(@class,'template-edit')] or //body[contains(@class,'template-atct_edit')]">
         <theme href="content.html" />
     </rules>
-    <!--content left-->
-    <rules if-content="//div[@id='portal-column-one'] and //div[@id='portal-column-two']">
-        <theme href="content-center.html" />
-    </rules>
-    <rules if-content="//div[@id='portal-column-one']">
-        <theme href="content-right.html" />
-    </rules>
-    <!--content right-->
-    <rules if-content="//div[@id='portal-column-two']">
-        <theme href="content-left.html" />
-    </rules>
-    <!--content/nocolumn-->
-    <rules if-not-content="//div[@id='portal-column-one'] and //div[@id='portal-column-two']">
-        <theme href="content.html" />
-    </rules>
+    
+    <!--content-->
+    <theme href="content-center.html" if-content="//div[@id='portal-column-one'] and //div[@id='portal-column-two']"/>
+    <theme href="content-right.html" css:if-content="#portal-column-one"/>
+    <theme href="content-left.html" css:if-content="#portal-column-two"/>
+    <theme href="content.html"/>
 
     <rules css:if-content="#homepage2-view">
         <before css:theme="#main" css:content="#wcc-homepage-homepage2slider"/>
     </rules>
-    
-    <replace theme-children="//div[contains(@class, 'main-page')]" content-children="//div[@id='portal-column-content']"
-        css:if-not-content="#homepage-view"/>
-
-    <before css:theme="#main" css:content="#portlets-in-header"/>
-    <replace css:theme-children="aside.left" css:if-content="#portal-column-one">
-        <xsl:for-each css:select="#portal-column-one .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <xsl:copy-of css:select="#portletmanager-plone-leftcolumn"/>
-        <xsl:copy-of css:select="#portal-column-one .managePortletsLink"/>
-    </replace>
-    <drop css:theme-children="aside.left" css:if-not-content="#portal-column-one"/> 
-    <replace css:theme-children="aside.right" css:if-content="#portal-column-two">
-        <xsl:for-each css:select="#portal-column-two .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <xsl:copy-of css:select="#portletmanager-plone-rightcolumn"/>
-        <xsl:copy-of css:select="#portal-column-two .managePortletsLink"/>
-    </replace>
-    <drop css:theme-children="aside.right" css:if-not-content="#portal-column-two"/> 
 
     <after css:theme="#main" css:content="#plone-analytics"/>
     <replace css:theme-children="#wcc-copyright" css:content-children="#wcc-copyright"/>
