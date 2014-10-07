@@ -13492,7 +13492,8 @@ body.subsite {
     padding: 0 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    height: 20px; }
+    height: 20px;
+    margin: 0; }
     .top-colorstrip .colorstrip-inner #portal-personaltools dd {
       padding: 5px 0; }
       .top-colorstrip .colorstrip-inner #portal-personaltools dd ul {
@@ -13521,7 +13522,7 @@ body.subsite {
   /*search*/ }
   .main-header .top-right-container ul.language {
     padding: 0;
-    margin: 40px 0 15px 0;
+    margin: 25px 0 15px 0;
     list-style: none; }
     .main-header .top-right-container ul.language li {
       float: left; }
@@ -13531,25 +13532,27 @@ body.subsite {
         color: black; }
     .main-header .top-right-container ul.language li:last-child > a {
       padding-right: 0; }
-  .main-header .top-right-container .search-container .search-portlet {
-    height: 40px;
-    position: relative;
-    margin-top: 75px; }
-    .main-header .top-right-container .search-container .search-portlet input[type="text"] {
-      border: 1px solid black;
-      padding: 10px 5%; }
-    .main-header .top-right-container .search-container .search-portlet input[type="submit"] {
+  .main-header .top-right-container .search-container {
+    margin-bottom: 10px; }
+    .main-header .top-right-container .search-container .search-portlet {
       height: 40px;
-      width: 40px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      border: none;
-      background: url(../images/button-search.png) no-repeat center center transparent;
-      padding: 10px;
-      cursor: pointer;
-      overflow: hidden;
-      text-indent: -9999em; }
+      position: relative;
+      /*margin-top: 75px;*/ }
+      .main-header .top-right-container .search-container .search-portlet input[type="text"] {
+        border: 1px solid black;
+        padding: 10px 5%; }
+      .main-header .top-right-container .search-container .search-portlet input[type="submit"] {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        background: url(../images/button-search.png) no-repeat center center transparent;
+        padding: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        text-indent: -9999em; }
 
 /*main header*/
 /*navigation*/

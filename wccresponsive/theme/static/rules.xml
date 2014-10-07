@@ -33,14 +33,11 @@
     </replace>
     
     <!--navigation-->
-    <replace css:theme-children='#portal-globalnav' 
-              css:content-children='#portal-globalnav' />
-    <replace 
-        css:theme-children='#portal-languageselector' 
-        css:content-children='#portal-languageselector'/>
-    <replace
-        css:theme-children=".footer-link"
-        css:content-children="#portal-siteactions"/>
+    <replace css:theme-children='#portal-globalnav' css:content-children='#portal-globalnav' />
+    <!--language-->
+    <replace css:theme-children='#portal-languageselector' css:content-children='#portal-languageselector'/>
+    
+    <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--content-->
     <replace css:theme-children=".main-page" css:content-children="#portal-column-content" />
