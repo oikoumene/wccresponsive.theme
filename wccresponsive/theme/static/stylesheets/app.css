@@ -13516,7 +13516,8 @@ body.subsite {
 .main-header .logo-container .tagline {
   width: 425px;
   margin-left: 60px;
-  margin-top: -5px; }
+  margin-top: -5px;
+  line-height: 18px; }
 .main-header .top-right-container {
   /*language*/
   /*search*/ }
@@ -14588,15 +14589,17 @@ fieldset, .editionComment {
   color: Black;
   letter-spacing: -0.05em;
   margin: inherit -0.05em;
-  font-size: 2em;
+  /*font-size: 2em;*/
   /* 26px equiv */
+  font-size: inherit;
   font-weight: bold; }
 
 /* Emulates styling from the description's view */
 #content .field textarea[name$=".description"], #archetypes-fieldname-description textarea#description {
   font-family: Arial, FreeSans, sans-serif;
   color: #666666;
-  font-size: 1.25em;
+  /*font-size:1.25em;*/
+  font-size: inherit;
   font-weight: bold; }
 
 div.formControls {

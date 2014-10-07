@@ -19,9 +19,8 @@
     <prepend css:theme=".colorstrip-inner" css:content="#portal-personaltools"/>
 
     <!--logo-->
-    <replace css:theme="#logo" css:content="#portal-logo"/>
-    <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
-    <drop css:theme=".logo-container h1.title" attributes="class"/>
+    <replace css:theme="#logo" css:content="#portal-logo" attribute="class"/>
+    <!--<replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>-->
 
     <!-- search -->
     <replace css:theme-children=".top-right-container .search-container">
