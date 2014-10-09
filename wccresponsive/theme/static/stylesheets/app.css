@@ -13512,7 +13512,8 @@ body.subsite {
   background: url(../images/logo.jpg) top left no-repeat transparent;
   text-indent: -9999px;
   display: block;
-  margin-top: 10px; }
+  margin-top: 10px;
+  height: 60px; }
 .main-header .logo-container .tagline {
   width: 425px;
   margin-left: 60px;
