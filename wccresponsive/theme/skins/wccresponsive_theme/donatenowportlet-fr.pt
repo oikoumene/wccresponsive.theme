@@ -1,0 +1,8 @@
+<metal:block define-macro="portlet">
+    <div class="donate-now-portlet">
+        <a tal:define="navroot context/@@plone_portal_state/navigation_root_url"
+            href="http://www.oikoumene.org/fr/faire-un-don/dons-en-ligne.html">
+            FAIRE UN DON
+        </a>
+    </div>
+</metal:block>
