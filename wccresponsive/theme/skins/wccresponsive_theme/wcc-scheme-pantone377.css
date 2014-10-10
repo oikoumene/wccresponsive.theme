@@ -1,0 +1,40 @@
+.top-colorstrip{
+    background: none #739600;
+}
+
+nav {
+    background: none #739600;
+}
+
+.footer-link li a:hover {
+    color: #739600;
+}
+
+a{
+    color: #739600;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #739600;
+}
+
+h2.portlet-header{
+    border-bottom: 1px solid #739600;
+}
+
+.lof-slidecontent ul.navigator-wrap-inner li.active {
+    background: url(slider-arrow-pantone377.png) no-repeat scroll left center !important;
+}
+
+.donation-portlet a {
+    background: #739600 none;
+}
+
+th{
+    background-color: #739600;
+}   
+
+body.subsite footer a:hover,
+footer a:hover {
+    color: #739600;
+}
