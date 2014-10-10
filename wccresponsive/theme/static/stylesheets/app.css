@@ -13472,9 +13472,6 @@ h2.portlet-header {
 body {
   background: #686763 none; }
 
-body.subsite {
-  background: #e5e5e5 none; }
-
 .top-colorstrip {
   height: 20px;
   background: none #205c90;
@@ -13691,6 +13688,23 @@ footer {
         padding: 0 5px; }
         footer .footer-right ul li a {
           color: white; }
+
+body.subsite {
+  background: #e5e5e5 none; }
+  body.subsite footer a {
+    color: black !important; }
+  body.subsite footer a:hover {
+    color: #205c90; }
+  body.subsite footer .footer-left p {
+    margin: 10px 0 0; }
+
+body.subsite .footer-left p {
+  margin: 10px 0 0; }
+  body.subsite .footer-left p a {
+    padding: 15px 0 15px 68px;
+    height: 54px;
+    display: block;
+    background: url(../images/wcclogo.gif) 0 0 no-repeat transparent; }
 
 /* @group Content Area */
 /* Editor styles */
