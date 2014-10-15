@@ -13697,14 +13697,11 @@ body.subsite {
     color: #205c90; }
   body.subsite footer .footer-left p {
     margin: 10px 0 0; }
-
-body.subsite .footer-left p {
-  margin: 10px 0 0; }
-  body.subsite .footer-left p a {
-    padding: 15px 0 15px 68px;
-    height: 54px;
-    display: block;
-    background: url(../images/wcclogo.gif) 0 0 no-repeat transparent; }
+    body.subsite footer .footer-left p a {
+      padding: 15px 0 15px 68px;
+      height: 54px;
+      display: block;
+      background: url(../images/wcclogo.gif) 0 0 no-repeat transparent; }
 
 /* @group Content Area */
 /* Editor styles */
@@ -15421,8 +15418,8 @@ dl.newTagsSection dd textarea {
 /*end formhelp*/
 /*select, input[text] on widescreen*/
 @media only screen and (min-width: 40.063em) {
-  .datetime-field {
-    display: inline;
+  .datetime-field, .date-field {
+    display: inline !important;
     margin-bottom: 0; }
   #calroot {
     box-sizing: content-box; }
@@ -15531,7 +15528,6 @@ input#sharing-user-group-search, input#sharing-search-button {
 input#sharing-search-button {
   padding: 8px 10px; }
 
-/*CSS ADJUSTMENT FOR NEW PACKAGES*/
 /*Content Chooser*/
 input#contentchooser-content-trees, input#contentchooser-content-search-input {
   box-shadow: none;
@@ -15548,6 +15544,11 @@ div.portletAssignments {
 
 div.portletAssignments .managedPortletActions a, div.portletAssignments .managedPortletActions button {
   padding: 0; }
+
+/*assign rule*/
+input[name='form.button.AddAssignment'] {
+  padding: 8px;
+  vertical-align: middle; }
 
 /*contents query*/
 input[name="form.contents.query"] {
@@ -15566,7 +15567,7 @@ form[action="enl_subscribers_view"] input[type="submit"] {
   padding: 8px; }
 
 /*field required*/
-.field label[for="form.email"], .field label[for="form.current_password"], .field label[for="form.new_password"], .field label[for="form.new_password_ctl"] {
+.field label[for="form.email"], .field label[for="form.current_password"], .field label[for="form.new_password"], .field label[for="form.new_password_ctl"], .field label[for="sender_from_address"], .field label[for="subject"], .field label[for="message"] {
   display: inline; }
 .field .fieldRequired {
   color: #ececec !important; }
@@ -15600,3 +15601,9 @@ form[action="enl_subscribers_view"] input[type="submit"] {
 /*faceted*/
 .faceted_letter, .faceted-empty-column {
   color: inherit !important; }
+
+/*viewlet below content body*/
+#viewlet-below-content-body:before {
+  content: ' ';
+  clear: both;
+  display: block; }
