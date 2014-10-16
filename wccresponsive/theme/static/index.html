@@ -188,6 +188,18 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="js/tinynav.min.js"></script>
     <script src="js/app.js"></script>
+    
+    <script>
+      
+      $("#portal-globalnav").tinyNav({
+  active: 'selected', // String: Set the "active" class
+  header: 'Navigation', // String: Specify text for "header" and show header instead of the active item
+  indent: '- ', // String: Specify text for indenting sub-items
+  label: '' // String: Sets the <label> text for the <select> (if not set, no label will be added)
+});
+    </script>
+    
   </body>
 </html>

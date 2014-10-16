@@ -140,7 +140,17 @@
     <drop theme="/html/body/script" />
     <after css:theme-children="body">
         <script src="++theme++wccresponsive.theme/js/foundation.min.js"></script>
+        <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         <script src="++theme++wccresponsive.theme/js/app.js"></script>
+        
+        <script>
+            $("#portal-globalnav").tinyNav({
+                active: 'selected', // String: Set the "active" class
+                header: 'Navigation', // String: Specify text for "header" and show header instead of the active item
+                indent: '- ', // String: Specify text for indenting sub-items
+                label: '' // String: Sets the 
+            });
+        </script>
     </after>
     
 </rules><!--end main rule-->
