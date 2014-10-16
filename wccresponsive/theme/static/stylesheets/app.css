@@ -13703,6 +13703,23 @@ body.subsite {
       display: block;
       background: url(../images/wcclogo.gif) 0 0 no-repeat transparent; }
 
+.tinynav {
+  display: none; }
+
+@media screen and (max-width: 640px) {
+  #main {
+    margin-top: 20px; }
+  nav {
+    background: none transparent;
+    box-shadow: none; }
+  nav > div:nth-child(1) {
+    padding: 0 0.9375rem; }
+  .tinynav {
+    display: block;
+    margin: 0; }
+  #portal-globalnav {
+    display: none; } }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
