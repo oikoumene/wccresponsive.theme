@@ -5,14 +5,14 @@ from zope.component import getUtility
 from wccresponsive.theme.interfaces import IThemeSettings
 from wccresponsive.theme.vocabulary import SCHEMES_CSS
 from zope.component.hooks import getSite
-#from wccresponsive.theme import getSettings
+from wccresponsive.theme import getSettings
 
 class SchemeCSS(grok.View):
     grok.context(Interface)
     grok.name('wccresponsive-theme-scheme.css')
 
     def render(self):
-        #settings = getSettings()
+        settings = getSettings()
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IThemeSettings)
         self.request.response.setHeader('Content-Type','text/css; charset=utf-8')
