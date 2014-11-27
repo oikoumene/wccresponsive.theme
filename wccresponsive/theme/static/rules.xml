@@ -14,7 +14,7 @@
     <copy theme="/html" content="/html" attributes="lang"/>
     <merge theme="/html/body" content="/html/body" attributes="class"/>
     <merge theme="/html/body" content="/html/body" attributes="dir"/>
-    <!--<merge theme="/html/body" content="meta[name='wcc.subsite']" attributes="class"/>-->
+    <merge theme="/html/body" css:content="meta[name='wcc.subsite']" attributes="class"/>
     <append css:theme="body" css:content="#plone-analytics"/>
     <prepend css:theme=".colorstrip-inner" css:content="#portal-personaltools"/>
 
