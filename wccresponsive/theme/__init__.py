@@ -4,6 +4,10 @@ from five import grok
 from collective.grok import gs
 from zope.i18nmessageid import MessageFactory
 
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+from wcc.theme.interfaces import IThemeSettings
+
 # Set up the i18n message factory for our package
 MessageFactory = MessageFactory('wccresponsive.theme')
 
@@ -23,3 +27,11 @@ gs.profile(name=u'default',
            title=u'wccresponsive.theme',
            description=_(u''),
            directory='profiles/default')
+
+def getSettings():
+    registry = getUtility(IRegistry)
+    try:
+        return registry.forInterface(IThemeSettings)
+    except:
+        registry.registerInterface(IThemeSettings)
+    return registry.forInterface(IThemeSettings)
