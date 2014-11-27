@@ -1,0 +1,9 @@
+<div id="wcc-copyright">
+    <a tal:attributes="href string: http://www.oikoumene.org/${view/portal_state/language}">
+        &copy;
+    <span tal:content="view/year"></span>
+    <span i18n:domain="wccresponsive.theme" i18n:translate="world_council_of_churches">
+        World Council of Churches
+    </span>
+    </a>
+</div>
