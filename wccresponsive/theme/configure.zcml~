@@ -17,23 +17,19 @@
     <include package=".browser"/>
 
 
-    <!--<genericsetup:registerProfile
+    <genericsetup:registerProfile
         name="default"
         title="WCC Responsive Theme"
         directory="profiles/default"
         description='Extension profile for the "WCC" Plone theme.'
         provides="Products.GenericSetup.interfaces.EXTENSION"
-        />-->
+        />
 
     <cmf:registerDirectory name="wccresponsive_theme"/>
 
     <browser:jbot
         directory="jbot"
         layer=".interfaces.IThemeSpecific" />
-    
-    <browser:resourceDirectory
-        name="wccresponsive.theme"
-        directory="static"/>
 
     <!-- -*- extra stuff goes here -*- -->
 

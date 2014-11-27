@@ -1,13 +1,10 @@
 from collective.grok import gs
-from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
-from wccresponsive.theme.interfaces import IThemeSettings
-
+from wccresponsive.theme import MessageFactory as _
 
 @gs.importstep(
     name=u'wccresponsive.theme', 
-    title=u'wccresponsive.theme import handler',
-    description=u'')
+    title=_('wccresponsive.theme import handler'),
+    description=_(''))
 def setupVarious(context):
     if context.readDataFile('wccresponsive.theme.marker.txt') is None:
         return

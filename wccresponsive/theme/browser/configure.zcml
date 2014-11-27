@@ -1,0 +1,38 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+            xmlns:browser="http://namespaces.zope.org/browser">
+
+    <browser:viewlet
+        name="plone.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.LogoViewlet"
+        permission="zope2.View"
+        layer="..interfaces.IThemeSpecific"
+        />
+
+    <browser:viewlet
+        name="wccresponsive.theme.css"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        permission="zope2.Public"
+        template="templates/schememeta.pt"
+        layer="..interfaces.IThemeSpecific"
+        />
+
+    <browser:viewlet
+        name="wccresponsive.theme.subsite"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".viewlets.SubsiteViewlet"
+        permission="zope2.Public"
+        layer="..interfaces.IThemeSpecific"
+        />
+
+    <browser:viewlet
+        name="wccresponsive.theme.copyright"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.CopyrightViewlet"
+        permission="zope2.Public"
+        layer="..interfaces.IThemeSpecific"
+        />
+
+    <adapter name="wccresponsive_event_renderer" factory=".portlets.WCCEventRenderer"/>
+
+</configure>
