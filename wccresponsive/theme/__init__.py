@@ -6,7 +6,7 @@ from zope.i18nmessageid import MessageFactory
 
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
-from wcc.theme.interfaces import IThemeSettings
+from wccresponsive.theme.interfaces import IThemeSettings
 
 # Set up the i18n message factory for our package
 MessageFactory = MessageFactory('wccresponsive.theme')
