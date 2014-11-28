@@ -13,8 +13,6 @@ class SchemeCSS(grok.View):
 
     def render(self):
         settings = getSettings()
-        registry = getUtility(IRegistry)
-        settings = registry.forInterface(IThemeSettings)
         self.request.response.setHeader('Content-Type','text/css; charset=utf-8')
         scheme_css = SCHEMES_CSS[settings.scheme]
         site = getSite()
