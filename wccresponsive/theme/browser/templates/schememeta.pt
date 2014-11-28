@@ -1,3 +1,3 @@
-<meta name="wcc.colorscheme" 
+<meta name="wccresponsive.colorscheme" 
     tal:define="portal context/@@plone_portal_state/portal;"
-    tal:attributes="content string:${portal/absolute_url}/wcc-theme-scheme.css"/>
+    tal:attributes="content string:${portal/absolute_url}/wccresponsive-theme-scheme.css"/>
