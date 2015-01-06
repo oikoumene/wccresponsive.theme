@@ -15,12 +15,12 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 #. Default: "Translation published on:"
-#: ./skins/wcc_theme/newsitem_view.pt:39
+#: ./skins/wccresponsive_theme/newsitem_view.pt:39
 msgid "trans_published_on"
-msgstr "English version published on:"
+msgstr "Version française publiée le:"
 
 #. Default: "World Council of Churches"
 #: ./browser/templates/copyright.pt:5
 msgid "world_council_of_churches"
-msgstr ""
+msgstr "Conseil œcuménique des Églises"
 
