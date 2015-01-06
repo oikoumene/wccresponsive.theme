@@ -38,3 +38,7 @@ body.subsite footer a:hover,
 footer a:hover {
     color: #739600;
 }
+
+@media screen and (max-width: 640px) {
+    nav{background: none transparent;box-shadow: none;}
+}

@@ -39,3 +39,6 @@ footer a:hover {
     color: #46812B;
 }   
 
+@media screen and (max-width: 640px) {
+    nav{background: none transparent;box-shadow: none;}
+}
