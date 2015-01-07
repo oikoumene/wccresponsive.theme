@@ -15443,7 +15443,7 @@ dl.newTagsSection dd textarea {
 
 /*start formhelp*/
 .formHelp {
-  font-size: 12px;
+  /*font-size: 12px;*/
   font-weight: normal;
   color: #6f6f6f; }
 
@@ -15465,6 +15465,8 @@ dl.newTagsSection dd textarea {
     width: auto;
     height: auto;
     vertical-align: middle; }
+  #content label select {
+    width: 100%; }
   form#groups_search, form#users_search {
     overflow-x: scroll; }
     form#groups_search input.quickSearch, form#users_search input.quickSearch {
@@ -15631,6 +15633,9 @@ form[action="enl_subscribers_view"] input[type="submit"] {
   font-size: 0.61111rem; }
 
 /*faceted*/
+#center-and-left-area #left-area {
+  width: 24em; }
+
 .faceted_letter, .faceted-empty-column {
   color: inherit !important; }
 
@@ -15639,3 +15644,20 @@ form[action="enl_subscribers_view"] input[type="submit"] {
   content: ' ';
   clear: both;
   display: block; }
+
+/*datagridwidget-table-view*/
+.datagridwidget-table-view {
+  border-collapse: collapse;
+  border: none; }
+
+/*byline portrait*/
+.byline-portrait {
+  height: 24px;
+  width: 24px; }
+
+/*description*/
+#content .documentDescription, #content #description {
+  color: #666666;
+  margin-left: 0;
+  font-size: 1.25em;
+  font-weight: bold; }
