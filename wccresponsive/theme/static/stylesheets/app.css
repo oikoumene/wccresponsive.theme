@@ -13735,6 +13735,10 @@ body.subsite {
   #portal-globalnav {
     display: none; } }
 
+/*wcc homepage*/
+.lof-slidecontent .preload {
+  z-index: 2 !important; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
@@ -15480,6 +15484,10 @@ dl.newTagsSection dd textarea {
   display: block;
   clear: both;
   content: ' '; }
+
+#viewlet-below-content a.managePortletsFallback {
+  margin-right: 1.11111rem;
+  margin-left: 1.11111rem; }
 
 /*start comments*/
 .discussion .commentImage img {
