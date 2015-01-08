@@ -41,8 +41,20 @@
     
     <!--content-->
     <replace css:theme-children=".main-page" css:content-children="#portal-column-content" />
-    <replace css:theme-children=".sidebar-left" css:content-children="#portal-column-one"/>
-    <replace css:theme-children=".sidebar-right" css:content-children="#portal-column-two"/>
+    <replace css:theme-children=".sidebar-left" css:if-content-children="#portal-column-one">
+        <xsl:for-each css:select="#portal-column-one .portletWrapper">
+            <xi:include href="portlet-rules.xml"/>
+        </xsl:for-each>
+        <xsl:copy-of css:select="#portletmanager-plone-leftcolumn"/>
+        <xsl:copy-of css:select="#portal-column-one .managePortletsLink"/>
+    </replace>
+    <replace css:theme-children=".sidebar-right" css:if-content-children="#portal-column-two">
+        <xsl:for-each css:select="#portal-column-two .portletWrapper">
+            <xi:include href="portlet-rules.xml"/>
+        </xsl:for-each>
+        <xsl:copy-of css:select="#portletmanager-plone-rightcolumn"/>
+        <xsl:copy-of css:select="#portal-column-two .managePortletsLink"/>
+    </replace>
 
     <!--homepage-->
     <rules css:if-content="#homepage-view.homepage-full-width">
