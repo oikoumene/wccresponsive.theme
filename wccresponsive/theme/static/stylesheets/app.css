@@ -13491,6 +13491,8 @@ body {
     border-bottom-left-radius: 0;
     height: 20px;
     margin: 0; }
+    .top-colorstrip .colorstrip-inner #portal-personaltools dt {
+      margin-bottom: 0; }
     .top-colorstrip .colorstrip-inner #portal-personaltools dd {
       padding: 5px 0; }
       .top-colorstrip .colorstrip-inner #portal-personaltools dd ul {
