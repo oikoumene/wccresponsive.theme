@@ -14119,7 +14119,10 @@ fieldset#search-field {
   text-align: center; }
 
 input.searchPage {
-  font-size: 200% !important; }
+  font-size: 100%; }
+
+input.searchPage.searchButton {
+  padding: 9px 15px !important; }
 
 #rss-subscription {
   float: left;
