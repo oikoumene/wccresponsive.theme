@@ -97,8 +97,7 @@
             </div>
         </after>
         <replace css:theme=".focus-container" css:content="#homepage-slider"/>
-        <drop css:theme=".main-page.right-content" css:if-not-content="#homepage-news-events-listing"/>
-        <replace css:theme-children=".news-list-container">
+        <!--<replace css:theme-children=".news-list-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
                 <div class="clearfix news-list-item">
                     <xsl:if test="div/div/img">
@@ -129,7 +128,7 @@
                     <xsl:copy-of select="p"/>
                 </div>
             </xsl:for-each>
-        </replace>
+        </replace>-->
 
     </rules>
 
