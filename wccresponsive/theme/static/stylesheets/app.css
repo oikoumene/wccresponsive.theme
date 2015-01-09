@@ -13585,6 +13585,7 @@ nav {
     border: 1px solid #cccccc;
     padding: 10px;
     margin-bottom: 20px;
+    /*donate*/
     /*social portlet*/ }
     .main aside .portlet-wrapper .portlet-content .navigation-portlet {
       padding: 0;
@@ -13592,6 +13593,15 @@ nav {
       .main aside .portlet-wrapper .portlet-content .navigation-portlet li {
         margin: 10px 0;
         display: block; }
+    .main aside .portlet-wrapper .donation-portlet a {
+      background: #205c90 none;
+      width: 100%;
+      display: block;
+      color: white;
+      padding: 15px;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 20px; }
     .main aside .portlet-wrapper .social-portlet {
       height: 32px;
       font-family: Frutiger, Candara, Arial, Helvetica, sans-serif;
