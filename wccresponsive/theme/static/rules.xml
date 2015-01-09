@@ -20,6 +20,7 @@
 
     <!--logo-->
     <replace css:theme="#logo" css:content="#portal-logo" attribute="class"/>
+    <drop css-content=".logo-description" />
     <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
 
     <!-- search -->
