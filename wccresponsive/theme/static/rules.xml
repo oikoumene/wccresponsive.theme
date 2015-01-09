@@ -40,7 +40,7 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--content-->
-    <replace css:theme-children=".main-page" css:content-children="#portal-column-content" />
+    <replace css:theme-children=".main-page" css:content-children="#portal-column-content" css:if-not-content="#homepage-view" />
     <replace css:theme-children=".sidebar-left" css:if-content-children="#portal-column-one">
         <xsl:for-each css:select="#portal-column-one .portletWrapper">
             <xi:include href="portlet-rules.xml"/>
@@ -97,7 +97,7 @@
             </div>
         </after>
         <replace css:theme=".focus-container" css:content="#homepage-slider"/>
-        <!--<replace css:theme-children=".news-list-container">
+        <replace css:theme-children=".news-list-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
                 <div class="clearfix news-list-item">
                     <xsl:if test="div/div/img">
@@ -128,7 +128,7 @@
                     <xsl:copy-of select="p"/>
                 </div>
             </xsl:for-each>
-        </replace>-->
+        </replace>
 
     </rules>
 
