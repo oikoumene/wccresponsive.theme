@@ -20,6 +20,7 @@
 
     <!--logo-->
     <replace css:theme="#logo" css:content="#portal-logo" attribute="class"/>
+    <drop css-content=".logo-description" />
     <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
 
     <!-- search -->
@@ -66,7 +67,7 @@
         </after>
         <drop css:theme="article.main-page" 
             css:if-not-content=".homepage-newsitem"/>
-        <replace css:theme-children=".three-col-items">
+        <replace css:theme-children=".subsite-news-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
                 <div>
                     <xsl:if test="div/div/img">
@@ -81,7 +82,7 @@
                 </div>
             </xsl:for-each>
         </replace>
-        <after css:theme=".three-col-items">
+        <after css:theme=".subsite-news-container">
             <div class="clearfix news-list-morelink">
                 <xsl:copy-of css:select=".homepage-morenews > a"/>
             </div>
