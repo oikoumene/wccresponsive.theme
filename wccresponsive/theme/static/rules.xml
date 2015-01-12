@@ -56,7 +56,7 @@
         <xsl:copy-of css:select="#portal-column-two .managePortletsLink"/>
     </replace>
 
-    <!--homepage-->
+    <!--subsite homepage-->
     <rules css:if-content="#homepage-view.homepage-full-width">
         <theme href="index-subsite.html"/>
         <after css:theme=".focus-container">
@@ -90,7 +90,76 @@
         </after>
         <replace css:theme=".focus-container" css:content="#homepage-slider"/>
     </rules>
-
+    
+    <rules css:if-content="#homepage3-view">
+        <theme href="index-subsite.html"/>
+        <after css:theme=".focus-container">
+            <div style="margin-top:20px">
+                <xsl:copy-of css:select="#edit-bar"/>
+            </div>
+        </after>
+        <drop css:theme="article.main-page" 
+            css:if-not-content=".homepage-newsitem"/>
+        <replace css:theme-children=".subsite-news-container">
+            <xsl:for-each css:select="#homepage-news .homepage-newsitem">
+                <div class="large-4 columns">
+                    <div class="news-item">
+                        <xsl:if test="div/div/img">
+                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                            <xsl:copy-of select="div/div/img"/>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </xsl:if>
+                        <xsl:if test="not(div/div/img)">
+                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </xsl:if>
+                    </div>
+                </div>
+            </xsl:for-each>
+        </replace>
+        <after css:theme=".subsite-news-container">
+            <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
+                <xsl:copy-of css:select=".homepage-morenews > a"/>
+            </div>
+        </after>
+        <replace css:theme=".focus-container" css:content="#homepage-slider"/>
+    </rules>
+    
+    <rules css:if-content="#homepage4-view">
+        <theme href="index-subsite.html"/>
+        <after css:theme=".focus-container">
+            <div style="margin-top:20px">
+                <xsl:copy-of css:select="#edit-bar"/>
+            </div>
+        </after>
+        <drop css:theme="article.main-page" 
+            css:if-not-content=".homepage-newsitem"/>
+        <replace css:theme-children=".subsite-news-container">
+            <xsl:for-each css:select="#homepage-news .homepage-newsitem">
+                <div class="large-4 columns">
+                    <div class="news-item">
+                        <xsl:if test="div/div/img">
+                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                            <xsl:copy-of select="div/div/img"/>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </xsl:if>
+                        <xsl:if test="not(div/div/img)">
+                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </xsl:if>
+                    </div>
+                </div>
+            </xsl:for-each>
+        </replace>
+        <after css:theme=".subsite-news-container">
+            <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
+                <xsl:copy-of css:select=".homepage-morenews > a"/>
+            </div>
+        </after>
+        <replace css:theme=".focus-container" css:content="#homepage-slider"/>
+    </rules>
+    
+    <!--main homepage-->
     <rules css:if-content="#homepage-view.homepage-normal-width">
         <theme href="index.html" />
         <after css:theme=".focus-container">
@@ -131,7 +200,6 @@
                 </div>
             </xsl:for-each>
         </replace>
-
     </rules>
 
     <!--<rules if-content="//body[contains(@class,'template-edit')] or //body[contains(@class,'template-atct_edit')]">-->
