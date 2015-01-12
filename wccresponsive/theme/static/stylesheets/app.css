@@ -13509,8 +13509,8 @@ body {
 .main-header .logo-container h1.title {
   margin: 0; }
 .main-header .logo-container h1.title a {
-  background: url(../images/logo.jpg) top left no-repeat transparent;
-  text-indent: -9999px;
+  /*background: url(../images/logo.jpg) top left no-repeat transparent;
+            text-indent: -9999px;*/
   display: block;
   margin-top: 10px;
   height: 60px; }
