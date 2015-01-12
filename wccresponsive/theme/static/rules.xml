@@ -69,15 +69,17 @@
         <replace css:theme-children=".subsite-news-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
                 <div class="large-4 columns">
-                    <xsl:if test="div/div/img">
-                        <h2><xsl:copy-of select="div/div/h3/a"/></h2>
-                        <xsl:copy-of select="div/div/img"/>
-                        <p><xsl:value-of select="div/div/p/text()"/></p>
-                    </xsl:if>
-                    <xsl:if test="not(div/div/img)">
-                        <h2><xsl:copy-of select="div/div/h3/a"/></h2>
-                        <p><xsl:value-of select="div/div/p/text()"/></p>
-                    </xsl:if>
+                    <div class="news-item">
+                        <xsl:if test="div/div/img">
+                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                            <xsl:copy-of select="div/div/img"/>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </xsl:if>
+                        <xsl:if test="not(div/div/img)">
+                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
+                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        </xsl:if>
+                    </div>
                 </div>
             </xsl:for-each>
         </replace>
