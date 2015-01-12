@@ -13776,6 +13776,12 @@ body.subsite {
 .lof-slidecontent .preload {
   z-index: 2 !important; }
 
+/*social share*/
+#collectivesocialbar {
+  padding: 5px;
+  margin: 5px;
+  border-top: 1px solid #cccccc; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
