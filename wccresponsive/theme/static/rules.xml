@@ -82,10 +82,8 @@
     
     <rules css:if-content="#homepage3-view">
         <theme href="index-subsite.html"/>
-        <drop css:theme="article.main-page" 
-            css:if-not-content=".homepage-newsitem"/>
         <replace css:theme-children=".subsite-news-container">
-            <xsl:for-each css:select="#homepage-news .homepage-newsitem">
+            <xsl:for-each css:select="#homepage3-newsblock > div.news-cell.cell > div:nth-child(1) > div.cell > div:nth-child(2)">
                 <div class="large-4 columns">
                     <div class="news-item">
                         <xsl:if test="div/div/img">
@@ -101,6 +99,7 @@
                 </div>
             </xsl:for-each>
         </replace>
+        <replace css:theme-children=".sidebar-right" css:content=".homepage3-text" />
     </rules>
     
     <rules css:if-content="#homepage4-view">
