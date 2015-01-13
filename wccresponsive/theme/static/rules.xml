@@ -40,7 +40,7 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--content-->
-    <replace css:theme-children=".main-page" css:content-children="#portal-column-content" css:if-not-content="#homepage-view" />
+    <replace css:theme-children=".main-page" css:content-children="#portal-column-content" css:if-not-content="#homepage-view | #homepage3-view" />
     <replace css:theme-children=".sidebar-left" css:if-content-children="#portal-column-one">
         <xsl:for-each css:select="#portal-column-one .portletWrapper">
             <xi:include href="portlet-rules.xml"/>
@@ -59,8 +59,6 @@
     <!--subsite homepage-->
     <rules css:if-content="#homepage-view.homepage-full-width">
         <theme href="index-subsite.html"/>
-        <drop css:theme="article.main-page" 
-            css:if-not-content=".homepage-newsitem"/>
         <replace css:theme-children=".subsite-news-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
                 <div class="large-4 columns">
