@@ -82,7 +82,9 @@
         <theme href="index-subsite.html"/>
         <replace css:theme-children=".subsite-news-container">
             <div class="large-12 column">
-                <xsl:copy-of css:select="#homepage2-bodytext > div"/>
+                <div class="news-item">
+                    <xsl:copy-of css:select-children="#homepage2-bodytext > div"/>
+                </div>
             </div>
         </replace>
     </rules>
