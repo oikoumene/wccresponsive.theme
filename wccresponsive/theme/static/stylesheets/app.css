@@ -13675,6 +13675,8 @@ nav {
       .main section.main-page .main-page-content-container .news-item {
         margin: 10px;
         text-align: justify; }
+        .main section.main-page .main-page-content-container .news-item h2 {
+          text-align: left; }
 
 /*main*/
 /*Portlet*/
