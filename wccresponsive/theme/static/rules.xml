@@ -81,17 +81,17 @@
     <rules css:if-content="#homepage3-view">
         <theme href="index-subsite.html"/>
         <replace css:theme-children=".subsite-news-container">
-            <xsl:for-each css:select="#homepage3-newsblock > div.news-cell.cell > div:nth-child(1) > div.cell > div:nth-child(2)">
+            <xsl:for-each css:select="#homepage3-newsblock > div.news-cell.cell > div:nth-child(1) > div.cell">
                 <div class="large-4 columns">
                     <div class="news-item">
-                        <xsl:if test="div/div/img">
-                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
-                            <xsl:copy-of select="div/div/img"/>
-                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        <xsl:if test="div[1]/img">
+                            <h2><xsl:copy-of select="div[2]/h3/a"/></h2>
+                            <xsl:copy-of select="div[1]/img"/>
+                            <p><xsl:value-of select="div[2]/p/text()"/></p>
                         </xsl:if>
-                        <xsl:if test="not(div/div/img)">
-                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
-                            <p><xsl:value-of select="div/div/p/text()"/></p>
+                        <xsl:if test="not(div[1]/img)">
+                            <h2><xsl:copy-of select="div[2]/h3/a"/></h2>
+                            <p><xsl:value-of select="div[2]/p/text()"/></p>
                         </xsl:if>
                     </div>
                 </div>
