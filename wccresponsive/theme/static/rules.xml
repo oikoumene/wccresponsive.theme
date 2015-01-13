@@ -166,7 +166,9 @@
     <!--for all homepage-->
     <after css:theme=".subsite-news-container">
         <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
-            <xsl:copy-of css:select=".homepage-morenews > a"/>
+            <div class="large-12 column">
+                <xsl:copy-of css:select=".homepage-morenews > a"/>
+            </div>
         </div>
     </after>
     <after css:theme=".focus-container">
