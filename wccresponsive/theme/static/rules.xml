@@ -40,7 +40,7 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--content-->
-    <replace theme-children="//section[@class='main-page']" content-children="//div[@id='portal-column-content']" if-not-content="//div[@id='homepage-view'] | //div[@id='homepage3-view']" />
+    <replace theme-children="//section[@class='main-page']" content-children="//div[@id='portal-column-content']" if-not-content="//div[@id='homepage-view'] | //div[@id='homepage2-view'] | //div[@id='homepage3-view'] | //div[@id='homepage4-view']" />
     <replace css:theme-children=".sidebar-left" css:if-content-children="#portal-column-one">
         <xsl:for-each css:select="#portal-column-one .portletWrapper">
             <xi:include href="portlet-rules.xml"/>
@@ -78,7 +78,16 @@
         </replace>
     </rules>
     
-    <rules css:if-content="#homepage3-view">
+    <rules css:if-content="#homepage2-view.homepage-view">
+        <theme href="index-subsite.html"/>
+        <replace css:theme-children=".subsite-news-container">
+            <div class="large-12 column">
+                <xsl:copy-of css:select="#homepage2-bodytext > div"/>
+            </div>
+        </replace>
+    </rules>
+    
+    <rules css:if-content="#homepage3-view.homepage-view">
         <theme href="index-subsite.html"/>
         <replace css:theme-children=".subsite-news-container">
             <xsl:for-each css:select="#homepage3-newsblock > div.news-cell.cell > div:nth-child(1) > div.cell">
@@ -100,7 +109,7 @@
         <replace css:theme-children=".sidebar-right" css:content=".homepage3-text" />
     </rules>
     
-    <rules css:if-content="#homepage4-view">
+    <rules css:if-content="#homepage4-view.homepage-view">
         <theme href="index-subsite.html"/>
         <drop css:theme="article.main-page" 
             css:if-not-content=".homepage-newsitem"/>
@@ -165,6 +174,7 @@
         <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
             <div class="large-12 column">
                 <xsl:copy-of css:select=".homepage-morenews > a"/>
+                <xsl:copy-of css:select=".homepage3-morenews > a"/>
             </div>
         </div>
     </after>
@@ -184,10 +194,6 @@
     <theme href="content-right.html" css:if-content="#portal-column-one"/>
     <theme href="content-left.html" css:if-content="#portal-column-two"/>
     <theme href="content.html"/>
-
-    <rules css:if-content="#homepage2-view">
-        <before css:theme="#main" css:content="#wcc-homepage-homepage2slider"/>
-    </rules>
 
     <after css:theme="#main" css:content="#plone-analytics"/>
     <replace css:theme-children="#wcc-copyright" css:content-children="#wcc-copyright"/>
