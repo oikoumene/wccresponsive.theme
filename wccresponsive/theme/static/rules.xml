@@ -40,7 +40,7 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--content-->
-    <replace css:theme-children=".main-page" css:content-children="#portal-column-content" css:if-not-content="#homepage-view | #homepage3-view" />
+    <replace theme-children="//section[@class='main-page']" content-children="//div[@id='portal-column-content']" if-not-content="//div[@id='homepage-view'] | //div[@id='homepage3-view']" />
     <replace css:theme-children=".sidebar-left" css:if-content-children="#portal-column-one">
         <xsl:for-each css:select="#portal-column-one .portletWrapper">
             <xi:include href="portlet-rules.xml"/>
