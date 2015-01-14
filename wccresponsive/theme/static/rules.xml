@@ -20,6 +20,7 @@
 
     <!--logo-->
     <replace css:theme="#logo" css:content="#portal-logo > a"/>
+    <drop theme="//p[contains(@class, 'tagline')]" if-content="//a[contains(@title, 'Bossey')]" />
     <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
 
     <!-- search -->
@@ -83,7 +84,7 @@
         <replace css:theme-children=".subsite-news-container">
             <div class="large-12 column">
                 <div class="news-item">
-                    <xsl:copy-of css:select-children="#homepage2-bodytext > div"/>
+                    <xsl:copy-of css:select="#homepage2-bodytext > div"/>
                 </div>
             </div>
         </replace>
