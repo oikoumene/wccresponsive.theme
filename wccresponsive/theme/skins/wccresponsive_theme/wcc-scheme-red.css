@@ -10,7 +10,7 @@ nav {
     color: #800000;
 }
 
-a,a span{
+a{
     color: #800000;
 }
 
@@ -37,6 +37,15 @@ th{
 body.subsite footer a:hover,
 footer a:hover {
     color: #800000;
+}
+
+/*button*/
+button, .button, input[type="button"], input[type="reset"], input[type="submit"]{
+    background-color: #800000;
+    border-color: #640000;
+}
+button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
+    background-color: #640000;
 }
 
 @media screen and (max-width: 640px) {
