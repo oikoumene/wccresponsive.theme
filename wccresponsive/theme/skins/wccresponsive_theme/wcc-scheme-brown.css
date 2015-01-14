@@ -39,6 +39,15 @@ footer a:hover {
     color: #574428;
 }
 
+/*button*/
+button, .button, input[type="button"], input[type="reset"], input[type="submit"]{
+    background-color: #574428;
+    border-color: #56442C;
+}
+button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
+    background-color: #56442C;
+}
+
 @media screen and (max-width: 640px) {
     nav{background: none transparent;box-shadow: none;}
 }
