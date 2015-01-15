@@ -190,7 +190,7 @@
         
         <ul class="sliders-wrap-inner" style="display:none">
             <xsl:for-each css:select="ul.sliders-wrap-inner li">
-                <li class="">
+                <li>
                     <xsl:copy-of select="a"/>
                 </li>
             </xsl:for-each>
