@@ -9,6 +9,7 @@
     
     <!--HEAD SECTION-->
     <!-- Drop styles in the head - these are added back by including them from Plone -->
+    <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />
     <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
     <copy theme="/html" content="/html" attributes="lang"/>
     <merge theme="/html/body" content="/html/body" attributes="class"/>
@@ -212,9 +213,13 @@
             
             <xsl:for-each css:select="ul.navigator-wrap-inner li">
                 <div class="wrap-inner">
-                    <img class="nav-slider-img" u="image" src="image" />
+                    <xsl:element name="img">
+                        <xsl:attribute name="class">nav-slider-img</xsl:attribute>
+                        <xsl:attribute name="src"></xsl:attribute>
+                    </xsl:element>
                     <div u="thumb">
-                        <xsl:copy-of select="div/a"/>
+                        <xsl:copy-of select="div/a/h2"/>
+                        <p><xsl:value-of select="div/a/span"/></p>
                     </div>
                 </div>
             </xsl:for-each>
@@ -323,12 +328,14 @@
                 .jssort11 .p h2{
                   margin: 10px 10px 0 60px;
                   text-align: right;
+                  padding-left: 40px;
                 }
                 .jssort11 .pav p,
                 .jssort11 .pdn p,
                 .jssort11 .p p{
                     margin: -10px 10px 0 60px;
                     text-align: right;
+                    padding-left: 40px;
                 }
             </style>
             <div u="slides" style="cursor: move;">
@@ -368,6 +375,7 @@
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
                 $(function(){
+                    alert("I am an alert box!");
                     if ($('ul.sliders-wrap-inner li').length == $('div.wrap-inner').length){
                         $('ul.sliders-wrap-inner li').each(function(key, value){
                                 imgSrc = $('a img', this).attr('src');
