@@ -368,7 +368,6 @@
     <after css:theme-children="body">
         <script src="++theme++wccresponsive.theme/js/foundation.min.js"></script>
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
-        <script src="++theme++wccresponsive.theme/js/app.js"></script>
         
         <xsl:if css:test="#homepage-slider">
             <script src="++theme++wccresponsive.theme/js/jssor.js"></script>
@@ -447,21 +446,9 @@
                     //responsive code end
                 };
             </script>
-            <!-- Trigger -->
-            <script>
-                jssor_slider1_starter('slider1_container');
-            </script>
             
         </xsl:if>
-        
-        <script>
-            $("#portal-globalnav").tinyNav({
-                active: 'selected', // String: Set the "active" class
-                header: 'Navigation', // String: Specify text for "header" and show header instead of the active item
-                indent: '- ', // String: Specify text for indenting sub-items
-                label: '' // String: Sets the 
-            });
-        </script>
+        <script src="++theme++wccresponsive.theme/js/app.js"></script>
     </after>
     
 </rules><!--end main rule-->
