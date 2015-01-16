@@ -213,7 +213,7 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">
             
             <xsl:for-each css:select="ul.navigator-wrap-inner li">
-                <div>
+                <div class="wrap-inner">
                     <img class="nav-slider-img" u="image" src="image" />
                     <div u="thumb">
                         <xsl:copy-of select="div/a"/>
