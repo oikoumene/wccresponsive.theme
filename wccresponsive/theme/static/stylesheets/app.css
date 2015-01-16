@@ -13723,7 +13723,8 @@ footer {
     footer .footer-right ul {
       font-size: 18px;
       list-style: none;
-      text-align: right; }
+      text-align: right;
+      margin-top: 20px; }
       footer .footer-right ul li {
         display: inline-block;
         padding: 0 5px; }
@@ -13733,30 +13734,25 @@ footer {
     footer .footer-left {
       text-align: center; }
     footer .footer-right {
-      margin-top: 0;
       margin-bottom: 10px; }
       footer .footer-right ul {
         text-align: center;
         margin: 0; } }
 
-/*body.subsite{
-    background: #E5E5E5 none;
-    footer{
-        a{color: #000 !important;}
-        a:hover{color: #205C90;}
-        .footer-left{
-            p{
-                margin: 10px 0 0;
-                a{
-                    padding: 15px 0 15px 68px;
-                    height: 54px;
-                    display: block;
-                    background: url(../images/wcclogo.gif) 0 0 no-repeat transparent;
-                }
-            }
-        }
-    }
-}*/
+body.subsite {
+  /*background: #E5E5E5 none;*/ }
+  body.subsite footer a {
+    color: black !important; }
+  body.subsite footer a:hover {
+    color: #205c90; }
+  body.subsite footer .footer-left p {
+    margin: 10px 0 0; }
+    body.subsite footer .footer-left p a {
+      padding: 15px 0 15px 68px;
+      height: 54px;
+      display: block;
+      background: url(../images/wcclogo.gif) 0 0 no-repeat transparent; }
+
 .tinynav {
   display: none; }
 
