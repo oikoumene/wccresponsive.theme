@@ -213,7 +213,7 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">
             
             <xsl:for-each css:select="ul.navigator-wrap-inner li">
-                <div>
+                <div class="wrap-inner">
                     <img class="nav-slider-img" u="image" src="image" />
                     <div u="thumb">
                         <xsl:copy-of select="div/a"/>
@@ -370,7 +370,7 @@
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
                 $(function(){
-                    if ($('ul.sliders-wrap-inner li').length == $('ul.navigator-wrap-inner li').length){
+                    if ($('ul.sliders-wrap-inner li').length == $('div.wrap-inner').length){
                         $('ul.sliders-wrap-inner li').each(function(key, value){
                                 imgSrc = $('a img', this).attr('src');
                                 $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
