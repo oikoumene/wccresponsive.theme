@@ -374,7 +374,6 @@
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
                 $(function(){
-                    alert("I am an alert box!");
                     if ($('ul.sliders-wrap-inner li').length == $('div.wrap-inner').length){
                         $('ul.sliders-wrap-inner li').each(function(key, value){
                                 imgSrc = $('a img', this).attr('src');
