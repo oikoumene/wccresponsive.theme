@@ -2,19 +2,26 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 	
     <javascript id="++resource++plone.app.jquery.js" expression="not: request/HTTP_X_THEME_ENABLED | nothing" />
+    <javascript id="modernizr.js" expression="not: request/HTTP_X_THEME_ENABLED | nothing" />
 
     <!-- -*- extra stuff goes here -*- -->
-	<javascript
-		id="++theme++wccresponsive.theme/js/jquery.min.js"
-		cacheable="True" compression="none"
-		cookable="False" enabled="True"
-		expression="request/HTTP_X_THEME_ENABLED | nothing"
-		inline="False" insert-before="++resource++plone.app.jquery.js"/>
     <javascript
-		id="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-		cacheable="True" compression="none"
-		cookable="False" enabled="True"
-		expression="request/HTTP_X_THEME_ENABLED | nothing"
-		inline="False" insert-before="++resource++plone.app.jquery.js"/>
+        id="++theme++wccresponsive.theme/js/modernizr.js"
+        cacheable="True" compression="none"
+        cookable="False" enabled="True"
+        expression="request/HTTP_X_THEME_ENABLED | nothing"
+        inline="False" insert-before="modernizr.js"/>
+    <javascript
+        id="++theme++wccresponsive.theme/js/jquery.min.js"
+        cacheable="True" compression="none"
+        cookable="False" enabled="True"
+        expression="request/HTTP_X_THEME_ENABLED | nothing"
+        inline="False" insert-before="++resource++plone.app.jquery.js"/>
+    <javascript
+        id="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+        cacheable="True" compression="none"
+        cookable="False" enabled="True"
+        expression="request/HTTP_X_THEME_ENABLED | nothing"
+        inline="False" insert-before="++resource++plone.app.jquery.js"/>
 
 </object>
