@@ -214,6 +214,7 @@
             <xsl:for-each css:select="ul.navigator-wrap-inner li">
                 <div class="wrap-inner">
                     <xsl:element name="img">
+                        <xsl:attribute name="u">img</xsl:attribute>
                         <xsl:attribute name="class">nav-slider-img</xsl:attribute>
                         <xsl:attribute name="src"></xsl:attribute>
                     </xsl:element>
