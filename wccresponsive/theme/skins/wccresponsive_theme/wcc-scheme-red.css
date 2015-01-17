@@ -27,7 +27,7 @@ h2.portlet-header{
 }
 
 .donation-portlet a {
-    background: #800000 none;
+    background: #800000 none !important;
 }
 
 th{
