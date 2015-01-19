@@ -214,18 +214,19 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">
             
-            <xsl:for-each css:select="ul.navigator-wrap-inner li">
+            <!--<xsl:for-each css:select="ul.navigator-wrap-inner li">-->
                 <div class="wrap-inner">
                     <xsl:element name="img">
                         <xsl:attribute name="u">image</xsl:attribute>
                         <xsl:attribute name="class">nav-slider-img</xsl:attribute>
+                        <xsl:attribute name="src"></xsl:attribute>
                     </xsl:element>
                     <div u="thumb">
                         <xsl:copy-of select="div/a/h2"/>
                         <p><xsl:value-of select="div/a/span"/></p>
                     </div>
                 </div>
-            </xsl:for-each>
+            <!--</xsl:for-each>-->
             
         </div>
         
@@ -376,16 +377,6 @@
             <script src="++theme++wccresponsive.theme/js/jssor.js"></script>
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
-                $(function(){
-                    if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
-                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
-                                imgSrc = $('a img', this).attr('src');
-                                $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
-                        });    
-                    }
-                });
-            </script>
-            <script>
                 jssor_slider1_starter = function (containerId) {
                     var options = {
                         $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -447,6 +438,16 @@
                     $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
                     //responsive code end
                 };
+            </script>
+            <script>
+                $(function(){
+                    if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
+                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
+                                imgSrc = $('a img', this).attr('src');
+                                $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
+                        });    
+                    }
+                });
             </script>
             
         </xsl:if>
