@@ -333,6 +333,7 @@
                   margin: 10px 10px 0 60px;
                   text-align: right;
                   padding-left: 40px;
+                  line-height: 30px;
                 }
                 .jssort11 .pav p,
                 .jssort11 .pdn p,
@@ -440,6 +441,9 @@
                 };
             </script>
             <script>
+                jssor_slider1_starter('slider1_container');
+            </script>
+            <script>
                 $(function(){
                     if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
                         $('ul.sliders-wrap-inner2 li').each(function(key, value){
@@ -452,9 +456,6 @@
             
         </xsl:if>
         <script src="++theme++wccresponsive.theme/js/app.js"></script>
-        <script>
-            jssor_slider1_starter('slider1_container');
-        </script>
     </after>
     
 </rules><!--end main rule-->
