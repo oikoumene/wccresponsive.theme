@@ -214,7 +214,7 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">
             
-            <!--<xsl:for-each css:select="ul.navigator-wrap-inner li">-->
+            <xsl:for-each css:select="ul.navigator-wrap-inner li">
                 <div class="wrap-inner">
                     <xsl:element name="img">
                         <xsl:attribute name="u">image</xsl:attribute>
@@ -225,7 +225,7 @@
                         <p><xsl:value-of select="div/a/span"/></p>
                     </div>
                 </div>
-            <!--</xsl:for-each>-->
+            </xsl:for-each>
             
         </div>
         
