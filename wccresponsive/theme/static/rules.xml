@@ -319,7 +319,7 @@
                 }
                 .jssort11 .pav, .jssort11 .pdn
                 {
-                        background: url(../img/arrow.png) 45px 0 no-repeat transparent;
+                        background: url(images/arrow.png) 45px 0 no-repeat transparent;
                         color: #fff !important;
                 }
                 .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
