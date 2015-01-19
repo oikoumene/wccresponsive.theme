@@ -41,7 +41,22 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--event listing-->
-    
+    <replace css:content="table" css:if-content=".featureimagelisting-row">
+        <div class="event-listing-wrapper">
+            <xsl:for-each css:select="featureimagelisting-row">
+                <div class="row event-row">
+                    <div class="large-3 medium-3 columns event-image">
+                        <xsl:copy-of css:select="td:nth-child(1) a"/>
+                    </div>
+                    <div class="large-9 medium-9 columns event-details">
+                        <xsl:copy-of css:select="td:nth-child(2) h4"/>
+                        <xsl:copy-of css:select="td:nth-child(2) div"/>
+                        <xsl:copy-of css:select="td:nth-child(2) p"/>
+                    </div>
+                </div>
+            </xsl:for-each>
+        </div>
+    </replace>
     
     <!--content-->
     <replace css:theme-children="div.main-page" css:content-children="#portal-column-content" />
