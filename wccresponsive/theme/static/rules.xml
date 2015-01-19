@@ -214,19 +214,18 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">
             
-            <xsl:for-each css:select="ul.navigator-wrap-inner li">
+            <!--<xsl:for-each css:select="ul.navigator-wrap-inner li">-->
                 <div class="wrap-inner">
                     <xsl:element name="img">
                         <xsl:attribute name="u">image</xsl:attribute>
                         <xsl:attribute name="class">nav-slider-img</xsl:attribute>
-                        <xsl:attribute name="src"></xsl:attribute>
                     </xsl:element>
                     <div u="thumb">
                         <xsl:copy-of select="div/a/h2"/>
                         <p><xsl:value-of select="div/a/span"/></p>
                     </div>
                 </div>
-            </xsl:for-each>
+            <!--</xsl:for-each>-->
             
         </div>
         
@@ -319,7 +318,7 @@
                 }
                 .jssort11 .pav, .jssort11 .pdn
                 {
-                        background: url(images/arrow.png) 45px 0 no-repeat transparent;
+                        background: url(++theme++wccresponsive.theme/images/arrow.png) 45px 0 no-repeat transparent;
                         color: #fff !important;
                 }
                 .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
