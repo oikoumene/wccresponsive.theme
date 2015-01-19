@@ -452,6 +452,9 @@
             
         </xsl:if>
         <script src="++theme++wccresponsive.theme/js/app.js"></script>
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script>
     </after>
     
 </rules><!--end main rule-->

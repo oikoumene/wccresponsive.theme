@@ -6,4 +6,4 @@ $("#portal-globalnav").tinyNav({
     label: '' // String: Sets the 
 });
     
-jssor_slider1_starter('slider1_container');
+//jssor_slider1_starter('slider1_container');
