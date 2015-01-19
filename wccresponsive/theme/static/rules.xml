@@ -190,7 +190,7 @@
     <!--slider-->
     <replace css:theme-children=".focus-container" css:if-content="#homepage-slider">
         
-        <ul class="sliders-wrap-inner" style="display:none">
+        <ul class="sliders-wrap-inner2" style="display:none">
             <xsl:for-each css:select="ul.sliders-wrap-inner li">
                 <li>
                     <xsl:copy-of select="a"/>
@@ -377,8 +377,8 @@
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
                 $(function(){
-                    if ($('ul.sliders-wrap-inner li').length == $('div.wrap-inner').length){
-                        $('ul.sliders-wrap-inner li').each(function(key, value){
+                    if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
+                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
                                 imgSrc = $('a img', this).attr('src');
                                 $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
                         });    
