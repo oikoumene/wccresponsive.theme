@@ -190,7 +190,7 @@
     <!--slider-->
     <replace css:theme-children=".focus-container" css:if-content="#homepage-slider">
         
-        <ul class="sliders-wrap-inner" style="display:none">
+        <ul class="sliders-wrap-inner2" style="display:none">
             <xsl:for-each css:select="ul.sliders-wrap-inner li">
                 <li>
                     <xsl:copy-of select="a"/>
@@ -319,7 +319,7 @@
                 }
                 .jssort11 .pav, .jssort11 .pdn
                 {
-                        background: url(../img/arrow.png) 45px 0 no-repeat transparent;
+                        background: url(++theme++wccresponsive.theme/images/arrow.png) 45px 0 no-repeat transparent;
                         color: #fff !important;
                 }
                 .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
@@ -376,16 +376,6 @@
         <xsl:if css:test="#homepage-slider">
             <script src="++theme++wccresponsive.theme/js/jssor.js"></script>
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
-            <script>
-                $(function(){
-                    if ($('ul.sliders-wrap-inner li').length == $('div.wrap-inner').length){
-                        $('ul.sliders-wrap-inner li').each(function(key, value){
-                                imgSrc = $('a img', this).attr('src');
-                                $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
-                        });    
-                    }
-                });
-            </script>
             <script>
                 jssor_slider1_starter = function (containerId) {
                     var options = {
@@ -448,6 +438,16 @@
                     $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
                     //responsive code end
                 };
+            </script>
+            <script>
+                $(function(){
+                    if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
+                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
+                                imgSrc = $('a img', this).attr('src');
+                                $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
+                        });    
+                    }
+                });
             </script>
             
         </xsl:if>
