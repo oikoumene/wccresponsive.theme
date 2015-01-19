@@ -13723,8 +13723,7 @@ footer {
     footer .footer-right ul {
       font-size: 18px;
       list-style: none;
-      text-align: right;
-      margin-top: 20px; }
+      text-align: right; }
       footer .footer-right ul li {
         display: inline-block;
         padding: 0 5px; }
@@ -13752,6 +13751,10 @@ body.subsite {
       height: 54px;
       display: block;
       background: url(../images/wcclogo.gif) 0 0 no-repeat transparent; }
+  body.subsite footer .footer-right {
+    margin-top: 30px; }
+    body.subsite footer .footer-right ul {
+      margin-top: 20px; }
 
 .tinynav {
   display: none; }
@@ -13783,6 +13786,18 @@ body.subsite {
   padding: 5px;
   margin: 5px;
   border-top: 1px solid #cccccc; }
+
+/*event listing*/
+div.event-listing-wrapper {
+  padding: 0.9375rem;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd; }
+  div.event-listing-wrapper > div:nth-of-type(even) {
+    background: none #dddddd; }
+  div.event-listing-wrapper > div {
+    padding: 10px 0; }
+    div.event-listing-wrapper > div .event-image {
+      text-align: center; }
 
 /* @group Content Area */
 /* Editor styles */
