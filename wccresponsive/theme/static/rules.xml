@@ -390,6 +390,17 @@
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
         <xsl:if css:test="#homepage-slider">
+            <script>
+                $(function(){
+                    if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
+                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
+                                imgSrc = $(' > a > img', this).attr('src');
+                                alert(imgSrc); 
+                                $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
+                        });    
+                    }
+                });
+            </script>
             <script src="++theme++wccresponsive.theme/js/jssor.js"></script>
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
@@ -457,17 +468,6 @@
             </script>
             <script>
                 jssor_slider1_starter('slider1_container');
-            </script>
-            <script>
-                $(function(){
-                    if ($('ul.sliders-wrap-inner2 li').length == $('div.wrap-inner').length){
-                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
-                                imgSrc = $(' > a > img', this).attr('src');
-                                alert(imgSrc); 
-                                $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);
-                        });    
-                    }
-                });
             </script>
             
         </xsl:if>
