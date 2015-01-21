@@ -41,9 +41,9 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--event listing-->
-    <!--<xsl:template match="//*[@id='parent-fieldname-text-4b0df14f1ac340ecba47fd12bad3d145']/table">-->
-    <!--    <div><xsl:apply-templates select="tbody"/></div>-->
-    <!--</xsl:template>-->
+    <xsl:template match="table">
+        <div class="event-listing-wrapper"><xsl:apply-templates select="tbody"/></div>
+    </xsl:template>
     <xsl:template match="//tr[@class='featureimagelisting-row']">
         <div class="row event-row">
             <div class="large-3 medium-3 columns event-image">
@@ -169,7 +169,7 @@
                 </div>
 
             </xsl:for-each>
-            <div class="clearfix news-list-morelink" style="text-align:right;margint:10px">
+            <div class="clearfix news-list-morelink" style="text-align:right;margin:10px">
                 <xsl:copy-of css:select=".homepage-morenews > a"/>
             </div>
         </replace>
@@ -326,7 +326,7 @@
                     .jssort11 .p
                     {
                             /*background:#181818;*/
-                            color: #205c90;
+                            color: #800000;
                     }
                     .jssort11 .pav, .jssort11 .pdn
                     {
@@ -349,7 +349,7 @@
                     .jssort11 .pav p,
                     .jssort11 .pdn p,
                     .jssort11 .p p{
-                        margin: -10px 10px 0 60px;
+                        margin: -5px 10px 0 60px;
                         text-align: right;
                         padding-left: 40px;
                     }
