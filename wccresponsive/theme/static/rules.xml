@@ -235,7 +235,7 @@
                             <xsl:attribute name="src"></xsl:attribute>
                         </xsl:element>
                         <div u="thumb">
-                            <xsl:copy-of select="div/a/h2"/>
+                            <h4><xsl:value-of select="div/a/h2"/></h4>
                             <p><xsl:value-of select="div/a/span"/></p>
                         </div>
                     </div>
@@ -337,22 +337,23 @@
                     {
                             /*background:#333;*/
                     }
-                    .jssort11 .pav h2, .jssort11 .pav span, .pdn h2, .jssort11 .pdn span{color: #fff}
-                    .jssort11 .pav h2,
-                    .jssort11 .pdn h2,
-                    .jssort11 .p h2{
+                    .jssort11 .pav h4, .jssort11 .pav span, .pdn h4, .jssort11 .pdn span{color: #fff}
+                    .jssort11 .pav h4,
+                    .jssort11 .pdn h4,
+                    .jssort11 .p h4{
                       margin: 10px 10px 0 60px;
                       text-align: right;
                       padding-left: 40px;
-                      line-height: 30px;
+                      line-height: 20px;
                     }
                     .jssort11 .pav p,
                     .jssort11 .pdn p,
                     .jssort11 .p p{
-                        margin: -5px 10px 0 60px;
+                        margin: 0 10px 0 60px;
                         text-align: right;
                         padding-left: 40px;
                     }
+                    .nav-slider-img{border: 10px solid #fff}
                 </style>
                 <div u="slides" style="cursor: move;">
                     <div u="prototype" class="p" style="position: absolute; width: 340px; height: 80px; top: 0; left: 0;">
