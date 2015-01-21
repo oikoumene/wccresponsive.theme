@@ -169,7 +169,7 @@
                 </div>
 
             </xsl:for-each>
-            <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
+            <div class="clearfix news-list-morelink" style="text-align:right;margint:10px">
                 <xsl:copy-of css:select=".homepage-morenews > a"/>
             </div>
         </replace>
