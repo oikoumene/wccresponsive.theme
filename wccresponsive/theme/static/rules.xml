@@ -330,7 +330,7 @@
                     }
                     .jssort11 .pav, .jssort11 .pdn
                     {
-                            background: url(++theme++wccresponsive.theme/images/arrow.png) 45px 0 no-repeat transparent;
+                            background: url(++theme++wccresponsive.theme/images/arrow.png) 31px 0 no-repeat transparent;
                             color: #fff !important;
                     }
                     .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
