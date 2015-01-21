@@ -326,7 +326,7 @@
                     .jssort11 .p
                     {
                             /*background:#181818;*/
-                            color: #205c90;
+                            color: #800000;
                     }
                     .jssort11 .pav, .jssort11 .pdn
                     {
@@ -349,7 +349,7 @@
                     .jssort11 .pav p,
                     .jssort11 .pdn p,
                     .jssort11 .p p{
-                        margin: -10px 10px 0 60px;
+                        margin: -5px 10px 0 60px;
                         text-align: right;
                         padding-left: 40px;
                     }
