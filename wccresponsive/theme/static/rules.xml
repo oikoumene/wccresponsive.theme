@@ -203,7 +203,7 @@
         </div>
     </after>
     <!--slider-->
-    <replace css:theme-children=".focus-container" css:if-content="#homepage-slider">
+    <replace css:theme-children=".focus-container" css:if-content=".template-view.portaltype-wcc-homepage-homepage">
         
         <ul class="sliders-wrap-inner2" style="display:none">
             <xsl:for-each css:select="ul.sliders-wrap-inner li">
