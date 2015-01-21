@@ -13739,7 +13739,7 @@ footer {
         margin: 0; } }
 
 body.subsite {
-  /*background: #E5E5E5 none;*/ }
+  background: #e5e5e5 none; }
   body.subsite footer a {
     color: black !important; }
   body.subsite footer a:hover {
@@ -13798,6 +13798,10 @@ div.event-listing-wrapper {
     padding: 10px 0; }
     div.event-listing-wrapper > div .event-image {
       text-align: center; }
+
+/*hide description*/
+#content .documentDescription {
+  display: none !important; }
 
 /* @group Content Area */
 /* Editor styles */
