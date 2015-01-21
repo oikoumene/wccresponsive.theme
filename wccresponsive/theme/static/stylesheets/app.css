@@ -13799,6 +13799,10 @@ div.event-listing-wrapper {
     div.event-listing-wrapper > div .event-image {
       text-align: center; }
 
+/*hide description*/
+#content .documentDescription {
+  display: none !important; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
