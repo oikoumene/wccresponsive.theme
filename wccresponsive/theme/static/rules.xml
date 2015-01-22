@@ -10,7 +10,6 @@
     <!--HEAD SECTION-->
     <!-- Drop styles in the head - these are added back by including them from Plone -->
     <drop theme="/html/head/style | /html/head/script | /html/head/link | /html/head/title" />
-    <drop content="/html/head/script[contains(@src, 'homepage.js')]" />
     <prepend theme="/html/head" content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta | /html/head/title" />
     <copy theme="/html" content="/html" attributes="lang"/>
     <merge theme="/html/body" content="/html/body" attributes="class"/>
@@ -152,6 +151,7 @@
     <!--main homepage-->
     <!--<rules css:if-content="#homepage5-view.homepage-normal-width">-->
     <rules css:if-content=".template-view.portaltype-wcc-homepage-homepage">
+        <drop content="/html/head/script[contains(@src, 'homepage.js')]" />
         <theme href="index.html" />
         <replace css:theme-children=".news-list-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
@@ -254,90 +254,75 @@
                     .jssort11 .pav:hover    (active mouseover)
                     .jssort11 .pdn          (mousedown)
                     */
-                    .jssort11
-                    {
-                            font-family: Arial, Helvetica, sans-serif;
+                    .jssort11{font-family: Arial, Helvetica, sans-serif;}
+                    .jssort11 .i, .jssort11 .pav:hover .i{
+                      position: absolute;
+                      top:3px;
+                      left:3px;
+                      WIDTH: 60px;
+                      HEIGHT: 30px;
+                      border: white 1px dashed;
                     }
-                    .jssort11 .i, .jssort11 .pav:hover .i
-                    {
-                            position: absolute;
-                            top:3px;
-                            left:3px;
-                            WIDTH: 60px;
-                            HEIGHT: 30px;
-                            border: white 1px dashed;
+                    * html .jssort11 .i{
+                      WIDTH /**/: 62px;
+                      HEIGHT /**/: 32px;
                     }
-                    * html .jssort11 .i
-                    {
-                            WIDTH /**/: 62px;
-                            HEIGHT /**/: 32px;
+                    .jssort11 .pav .i{
+                      border: white 1px solid;
                     }
-                    .jssort11 .pav .i
-                    {
-                            border: white 1px solid;
+                    .jssort11 .t, .jssort11 .pav:hover .t{
+                      position: absolute;
+                      top: 3px;
+                      left: 68px;
+                      width:129px;
+                      height: 32px;
+                      line-height:32px;
+                      text-align: center;
+                      color:#fc9835;
+                      font-size:13px;
+                      font-weight:700;
                     }
-                    .jssort11 .t, .jssort11 .pav:hover .t
-                    {
-                            position: absolute;
-                            top: 3px;
-                            left: 68px;
-                            width:129px;
-                            height: 32px;
-                            line-height:32px;
-                            text-align: center;
-                            color:#fc9835;
-                            font-size:13px;
-                            font-weight:700;
+                    .jssort11 .pav .t, .jssort11 .phv .t, .jssort11 .p:hover .t{
+                      color:#fff;
                     }
-                    .jssort11 .pav .t, .jssort11 .phv .t, .jssort11 .p:hover .t
-                    {
-                            color:#fff;
+                    .jssort11 .c, .jssort11 .pav:hover .c{
+                      position: absolute;
+                      top: 38px;
+                      left: 3px;
+                      width:197px;
+                      height: 31px;
+                      line-height:31px;
+                      color:#fff;
+                      font-size:11px;
+                      font-weight:400;
+                      overflow: hidden;
                     }
-                    .jssort11 .c, .jssort11 .pav:hover .c
-                    {
-                            position: absolute;
-                            top: 38px;
-                            left: 3px;
-                            width:197px;
-                            height: 31px;
-                            line-height:31px;
-                            color:#fff;
-                            font-size:11px;
-                            font-weight:400;
-                            overflow: hidden;
+                    .jssort11 .pav .c, .jssort11 .phv .c, .jssort11 .p:hover .c{
+                      color:#fc9835;
                     }
-                    .jssort11 .pav .c, .jssort11 .phv .c, .jssort11 .p:hover .c
-                    {
-                            color:#fc9835;
+                    .jssort11 .t, .jssort11 .c{
+                      transition: color 2s;
+                      -moz-transition: color 2s;
+                      -webkit-transition: color 2s;
+                      -o-transition: color 2s;
                     }
-                    .jssort11 .t, .jssort11 .c
-                    {
-                            transition: color 2s;
-                        -moz-transition: color 2s;
-                        -webkit-transition: color 2s;
-                        -o-transition: color 2s;
+                    .jssort11 .p:hover .t, .jssort11 .phv .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .phv .c, .jssort11 .pav:hover .c{
+                      transition: none;
+                      -moz-transition: none;
+                      -webkit-transition: none;
+                      -o-transition: none;
                     }
-                    .jssort11 .p:hover .t, .jssort11 .phv .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .phv .c, .jssort11 .pav:hover .c
-                    {
-                            transition: none;
-                        -moz-transition: none;
-                        -webkit-transition: none;
-                        -o-transition: none;
+                    .jssort11 .p{
+                          /*background:#181818;*/
+                          color: #205c90;
                     }
-                    .jssort11 .p
-                    {
-                            /*background:#181818;*/
-                            color: #800000;
+                    .jssort11 .pav, .jssort11 .pdn{
+                      background: url(++theme++wccresponsive.theme/images/arrow.png) 31px 0 no-repeat transparent;
+                      color: #fff !important;
                     }
-                    .jssort11 .pav, .jssort11 .pdn
-                    {
-                            background: url(++theme++wccresponsive.theme/images/arrow.png) 31px 0 no-repeat transparent;
-                            color: #fff !important;
-                    }
-                    .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover
-                    {
-                            /*background:#333;*/
-                    }
+                    .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover{
+                      /*background:#333;*/
+                      }
                     .jssort11 .pav h4, .jssort11 .pav span, .pdn h4, .jssort11 .pdn span{color: #fff}
                     .jssort11 .pav h4,
                     .jssort11 .pdn h4,
@@ -350,9 +335,9 @@
                     .jssort11 .pav p,
                     .jssort11 .pdn p,
                     .jssort11 .p p{
-                        margin: 0 10px 0 60px;
-                        text-align: right;
-                        padding-left: 40px;
+                      margin: 0 10px 0 60px;
+                      text-align: right;
+                      padding-left: 40px;
                     }
                     .nav-slider-img{border: 10px solid #fff}
                 </style>
