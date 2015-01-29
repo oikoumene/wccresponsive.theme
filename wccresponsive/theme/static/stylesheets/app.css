@@ -8660,10 +8660,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.26667rem; }
+  font-size: 2rem; }
 
 h2 {
-  font-size: 1.8rem; }
+  font-size: 1.66667rem; }
 
 h3 {
   font-size: 1.46667rem; }
@@ -8819,9 +8819,9 @@ blockquote, blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 2.93333rem; }
+    font-size: 2.66667rem; }
   h2 {
-    font-size: 2.46667rem; }
+    font-size: 2.33333rem; }
   h3 {
     font-size: 1.8rem; }
   h4 {
@@ -11874,10 +11874,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.26667rem; }
+  font-size: 2rem; }
 
 h2 {
-  font-size: 1.8rem; }
+  font-size: 1.66667rem; }
 
 h3 {
   font-size: 1.46667rem; }
@@ -12033,9 +12033,9 @@ blockquote, blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 2.93333rem; }
+    font-size: 2.66667rem; }
   h2 {
-    font-size: 2.46667rem; }
+    font-size: 2.33333rem; }
   h3 {
     font-size: 1.8rem; }
   h4 {
@@ -12439,10 +12439,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.26667rem; }
+  font-size: 2rem; }
 
 h2 {
-  font-size: 1.8rem; }
+  font-size: 1.66667rem; }
 
 h3 {
   font-size: 1.46667rem; }
@@ -12598,9 +12598,9 @@ blockquote, blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 2.93333rem; }
+    font-size: 2.66667rem; }
   h2 {
-    font-size: 2.46667rem; }
+    font-size: 2.33333rem; }
   h3 {
     font-size: 1.8rem; }
   h4 {
@@ -15295,8 +15295,8 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 div.portlet-content ul.navTree .navTreeCurrentNode, dl.portlet ul.navTree .navTreeCurrentItem {
   background-color: #dddddd;
   border-left: 1em solid #dddddd;
-  margin-left: -1em;
-  margin-right: -1em; }
+  /*margin-left: -1em;*/
+  /*margin-right: -1em;*/ }
 
 /* @end */
 /* @group Calendar portlet */
