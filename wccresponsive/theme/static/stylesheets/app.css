@@ -13583,6 +13583,8 @@ nav {
   margin-top: 30px; }
   .main aside {
     /*donate*/ }
+    .main aside ul {
+      list-style: none; }
     .main aside .portlet-wrapper {
       border: 1px solid #cccccc;
       padding: 10px;
@@ -15552,10 +15554,6 @@ dl.newTagsSection dd textarea {
   clear: both;
   content: ' '; }
 
-#viewlet-below-content a.managePortletsFallback {
-  margin-right: 1.11111rem;
-  margin-left: 1.11111rem; }
-
 /*start comments*/
 .discussion .commentImage img {
   height: 32px; }
@@ -15736,3 +15734,12 @@ form[action="enl_subscribers_view"] input[type="submit"] {
   margin-left: 0;
   font-size: 1.25em;
   font-weight: bold; }
+
+/*internallinkcontainer + radioscrolllist*/
+#internallinkcontainer.radioscrolllist .list.item {
+  padding: 0.5em; }
+  #internallinkcontainer.radioscrolllist .list.item span, #internallinkcontainer.radioscrolllist .list.item a {
+    margin-top: -5px; }
+
+#details-fields.widget.radioscrolllist .field .widget select, #details-fields.widget.radioscrolllist .field .widget input {
+  margin-bottom: 0 !important; }
