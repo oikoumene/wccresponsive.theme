@@ -13810,8 +13810,8 @@ div.event-listing-wrapper {
   margin: 10px 0;
   font-size: 10px; }
 
-th {
-  color: white; }
+table tr th {
+  color: white !important; }
 
 /* @group Content Area */
 /* Editor styles */
