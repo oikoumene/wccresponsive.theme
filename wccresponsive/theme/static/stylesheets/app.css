@@ -13810,6 +13810,9 @@ div.event-listing-wrapper {
   margin: 10px 0;
   font-size: 10px; }
 
+th {
+  color: white; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
@@ -15289,7 +15292,7 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
   padding-left: 0.5em;
   line-height: 2em; }
 
-dl.portlet-content ul.navTree .navTreeCurrentNode, dl.portlet ul.navTree .navTreeCurrentItem {
+div.portlet-content ul.navTree .navTreeCurrentNode, dl.portlet ul.navTree .navTreeCurrentItem {
   background-color: #dddddd;
   border-left: 1em solid #dddddd;
   margin-left: -1em;
