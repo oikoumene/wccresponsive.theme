@@ -41,9 +41,9 @@
     <replace css:theme-children=".footer-link" css:content-children="#portal-siteactions"/>
     
     <!--event listing-->
-    <!--<xsl:template match="table">-->
-    <!--    <div class="event-listing-wrapper"><xsl:apply-templates select="tbody"/></div>-->
-    <!--</xsl:template>-->
+    <xsl:template match="table.event-listing">
+        <div class="event-listing-wrapper"><xsl:apply-templates select="tbody"/></div>
+    </xsl:template>
     <xsl:template match="//tr[@class='featureimagelisting-row']">
         <div class="row event-row">
             <div class="large-3 medium-3 columns event-image">
