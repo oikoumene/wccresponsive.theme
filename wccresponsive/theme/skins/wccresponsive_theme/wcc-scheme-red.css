@@ -13,8 +13,11 @@ nav {
 a{
     color: #800000;
 }
-a:hover, a:focus{
+a:focus{
     color: #640000;
+}
+a:hover{
+    color: #000;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -53,4 +56,8 @@ button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hov
 
 @media screen and (max-width: 640px) {
     nav{background: none transparent;box-shadow: none;}
+}
+
+.tinynav, .tinynav:focus,.tinynav:hover{
+    background-color: #800000;
 }
