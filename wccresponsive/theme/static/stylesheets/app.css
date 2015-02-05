@@ -13759,7 +13759,13 @@ body.subsite {
       margin-top: 20px; }
 
 .tinynav {
-  display: none; }
+  display: none;
+  background-color: #205c90;
+  font-weight: bold;
+  color: white; }
+
+.tinynav:focus, .tinynav:hover {
+  background-color: #205c90; }
 
 @media screen and (max-width: 640px) {
   #main {
