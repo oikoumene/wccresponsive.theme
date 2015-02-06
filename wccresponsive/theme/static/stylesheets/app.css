@@ -15102,11 +15102,11 @@ dl.actionMenu.activated dt a, dl.actionMenu.activated dd a, dl.actionMenu.activa
   border: none; }
 
 #content ul.configlets li a:visited {
-  color: #436976;
+  color: maroon;
   background-color: transparent; }
 
 #content ul.configlets li a:active {
-  color: #436976;
+  color: maroon;
   background-color: transparent; }
 
 #content ul.configlets li label {

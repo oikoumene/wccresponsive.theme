@@ -316,7 +316,7 @@
                     }
                     .jssort11 .p{
                           /*background:#181818;*/
-                          color: #205c90;
+                          color: #800000;
                     }
                     .jssort11 .pav, .jssort11 .pdn{
                       background: url(++theme++wccresponsive.theme/images/arrow.png) 31px 0 no-repeat transparent;
