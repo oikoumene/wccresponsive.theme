@@ -46,7 +46,7 @@
             <xsl:apply-templates select="tr"/>
         </div>
     </xsl:template>
-    <xsl:template match="tr">
+    <xsl:template match="tr[@class='featureimagelisting-row']">
         <div class="row event-row">
             <div class="large-3 medium-3 columns event-image">
                   <xsl:apply-templates select="td[1]"/>
